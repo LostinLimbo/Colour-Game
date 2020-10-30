@@ -1,0 +1,21 @@
+<% include ../partials/header %>
+
+
+<div class=" container-fluid mt-3 pb-2">
+  <h3 class="text-dark text-center pt-2 ">Add a New Comment to <%= campground.name %></h2>
+   <span class="input-group">
+     <form action="/campgrounds/<%= campground._id %>/comments " method="POST" class="mx-auto">
+      <input class="my-3 form-control" id="newcamp" type="text" placeholder="Write Comment here" name="comment[text]" required> 
+      <input class="my-3 form-control" type="text" id="campimg" placeholder="Author" name="comment[author]" required>    
+
+      <input class="btn btn-success form-control mt-3" type="submit">
+      <a class="text-light" href="/campgrounds">Go Back</a>
+     </form>
+   </span>
+</div>
+
+
+
+
+
+<% include ../partials/footer %> 
